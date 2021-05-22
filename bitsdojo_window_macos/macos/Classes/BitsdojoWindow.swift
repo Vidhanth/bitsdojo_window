@@ -36,6 +36,10 @@ open class BitsdojoWindow: NSWindow {
         self.styleMask = localStyle;
         self.titlebarAppearsTransparent = true
         self.titleVisibility = .hidden
+        self.styleMask.remove(.closable)
+        self.styleMask.remove(.fullScreen)
+        self.styleMask.remove(.miniaturizable)
+        self.styleMask.remove(.resizable)
         self.isOpaque = false
         self.isMovable = false
     }
